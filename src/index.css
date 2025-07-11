@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #334155;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --accent-cyan: #22d3ee;
+  --accent-purple: #7c3aed;
+  --font-pixel: 'Press Start 2P', cursive;
+}
+
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Base Styles === */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-container {
+  padding: 16px;
+}
+
+/* === App Header === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--bg-card);
+  border-bottom: 2px solid var(--accent-purple);
+}
+
+.navbar-title {
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  color: var(--accent-purple);
+  background: none;
+  border: none;
+}
+
+/* === Welcome & Branding === */
+.navbar-header {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-purple);
+  letter-spacing: 1px;
+}
+
+.app-tagline {
+  font-size: 12px;
+  color: var(--accent-cyan);
+  font-weight: bold;
+}
+
+/* === Tab Navigation === */
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tab-box {
+  border: 2px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  background-color: var(--bg-card);
+  transition: 0.3s;
+}
+
+.tab-box:hover {
+  background-color: var(--bg-card-hover);
+  color: white;
+}
+
+/* === Sidebar === */
+.sidebar {
+  background-color: var(--bg-card);
+  padding: 1rem;
+  border: 2px solid var(--accent-purple);
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.sidebar a {
+  color: var(--accent-cyan);
+  margin: 0.5rem 0;
+  display: block;
+}
+
+/* === Task Cards === */
+.task-card {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  border: 2px solid var(--accent-cyan);
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+
+.task-content h3 {
+  color: var(--accent-cyan);
+  margin: 0;
+  font-size: 14px;
+}
+
+.task-content p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 12px;
+}
+
+/* === Progress Bar === */
+.progress-container {
+  background-color: #1a2238;
+  border: 1px solid var(--bg-card-hover);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: var(--accent-cyan);
+  width: 70%; /* Example: make dynamic */
+}
+
+/* === Welcome Section === */
+.welcome-box {
+  background-color: var(--bg-card);
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--accent-purple);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* === Profile Card === */
+.profile-card {
+  background-color: var(--bg-card);
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px dashed var(--accent-purple);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* === Responsive Enhancements === */
+@media (min-width: 600px) {
+  .navbar-title {
+    font-size: 1.8rem;
+  }
+
+  .task-card {
+    font-size: 1rem;
+  }
+
+  .tab-box {
+    font-size: 16px;
+  }
+}
